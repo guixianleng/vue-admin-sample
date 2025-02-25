@@ -15,7 +15,6 @@ const customRoutes: CustomRoute[] = [
     component: 'layout.base',
     meta: {
       title: 'exception',
-      i18nKey: 'route.exception',
       icon: 'ant-design:exception-outlined',
       order: 7
     },
@@ -26,7 +25,6 @@ const customRoutes: CustomRoute[] = [
         component: 'view.403',
         meta: {
           title: 'exception_403',
-          i18nKey: 'route.exception_403',
           icon: 'ic:baseline-block'
         }
       },
@@ -36,7 +34,6 @@ const customRoutes: CustomRoute[] = [
         component: 'view.404',
         meta: {
           title: 'exception_404',
-          i18nKey: 'route.exception_404',
           icon: 'ic:baseline-web-asset-off'
         }
       },
@@ -46,7 +43,6 @@ const customRoutes: CustomRoute[] = [
         component: 'view.500',
         meta: {
           title: 'exception_500',
-          i18nKey: 'route.exception_500',
           icon: 'ic:baseline-wifi-off'
         }
       }
@@ -58,7 +54,6 @@ const customRoutes: CustomRoute[] = [
     component: 'layout.base',
     meta: {
       title: 'document',
-      i18nKey: 'route.document',
       order: 2,
       icon: 'mdi:file-document-multiple-outline'
     },
@@ -72,7 +67,6 @@ const customRoutes: CustomRoute[] = [
         },
         meta: {
           title: 'document_antd',
-          i18nKey: 'route.document_antd',
           order: 7,
           icon: 'logos:ant-design'
         }
@@ -86,7 +80,6 @@ const customRoutes: CustomRoute[] = [
         },
         meta: {
           title: 'document_naive',
-          i18nKey: 'route.document_naive',
           order: 6,
           icon: 'logos:naiveui'
         }
@@ -100,7 +93,6 @@ const customRoutes: CustomRoute[] = [
         },
         meta: {
           title: 'document_element-plus',
-          i18nKey: 'route.document_element-plus',
           order: 7,
           icon: 'ep:element-plus'
         }
@@ -114,7 +106,6 @@ const customRoutes: CustomRoute[] = [
         },
         meta: {
           title: 'document_alova',
-          i18nKey: 'route.document_alova',
           order: 8,
           localIcon: 'alova'
         }
@@ -128,7 +119,6 @@ const customRoutes: CustomRoute[] = [
         },
         meta: {
           title: 'document_project',
-          i18nKey: 'route.document_project',
           order: 1,
           localIcon: 'logo'
         }
@@ -139,7 +129,6 @@ const customRoutes: CustomRoute[] = [
         component: 'view.iframe-page',
         meta: {
           title: 'document_project-link',
-          i18nKey: 'route.document_project-link',
           order: 2,
           localIcon: 'logo',
           href: 'https://docs.soybeanjs.cn/zh'
@@ -154,7 +143,6 @@ const customRoutes: CustomRoute[] = [
         },
         meta: {
           title: 'document_unocss',
-          i18nKey: 'route.document_unocss',
           order: 5,
           icon: 'logos:unocss'
         }
@@ -168,7 +156,6 @@ const customRoutes: CustomRoute[] = [
         },
         meta: {
           title: 'document_vite',
-          i18nKey: 'route.document_vite',
           order: 4,
           icon: 'logos:vitejs'
         }
@@ -182,7 +169,6 @@ const customRoutes: CustomRoute[] = [
         },
         meta: {
           title: 'document_vue',
-          i18nKey: 'route.document_vue',
           order: 3,
           icon: 'logos:vue'
         }

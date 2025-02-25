@@ -174,18 +174,7 @@ const local: App.I18n.Schema = {
     'document_element-plus': 'Element Plus Document',
     document_alova: 'Alova Document',
     'user-center': 'User Center',
-    about: 'About',
     function: 'System Function',
-    alova: 'Alova Example',
-    alova_request: 'Alova Request',
-    alova_user: 'User List',
-    alova_scenes: 'Scenario Request',
-    function_tab: 'Tab',
-    'function_multi-tab': 'Multi Tab',
-    'function_hide-child': 'Hide Child',
-    'function_hide-child_one': 'Hide Child',
-    'function_hide-child_two': 'Two',
-    'function_hide-child_three': 'Three',
     function_request: 'Request',
     'function_toggle-auth': 'Toggle Auth',
     'function_super-page': 'Super Admin Visible',
@@ -194,12 +183,6 @@ const local: App.I18n.Schema = {
     'manage_user-detail': 'User Detail',
     manage_role: 'Role Manage',
     manage_menu: 'Menu Manage',
-    'multi-menu': 'Multi Menu',
-    'multi-menu_first': 'Menu One',
-    'multi-menu_first_child': 'Menu One Child',
-    'multi-menu_second': 'Menu Two',
-    'multi-menu_second_child': 'Menu Two Child',
-    'multi-menu_second_child_home': 'Menu Two Child Home',
     exception: 'Exception',
     exception_403: '403',
     exception_404: '404',
@@ -208,26 +191,10 @@ const local: App.I18n.Schema = {
     plugin_copy: 'Copy',
     plugin_charts: 'Charts',
     plugin_charts_echarts: 'ECharts',
-    plugin_charts_antv: 'AntV',
-    plugin_charts_vchart: 'VChart',
     plugin_editor: 'Editor',
     plugin_editor_quill: 'Quill',
-    plugin_editor_markdown: 'Markdown',
     plugin_icon: 'Icon',
-    plugin_map: 'Map',
-    plugin_print: 'Print',
-    plugin_swiper: 'Swiper',
-    plugin_video: 'Video',
-    plugin_barcode: 'Barcode',
-    plugin_pinyin: 'pinyin',
-    plugin_excel: 'Excel',
-    plugin_pdf: 'PDF preview',
-    plugin_gantt: 'Gantt Chart',
-    plugin_gantt_dhtmlx: 'dhtmlxGantt',
-    plugin_gantt_vtable: 'VTableGantt',
-    plugin_typeit: 'Typeit',
-    plugin_tables: 'Tables',
-    plugin_tables_vtable: 'VTable'
+    plugin_print: 'Print'
   },
   page: {
     login: {
@@ -275,19 +242,6 @@ const local: App.I18n.Schema = {
       bindWeChat: {
         title: 'Bind WeChat'
       }
-    },
-    about: {
-      title: 'About',
-      introduction: `SoybeanAdmin is an elegant and powerful admin template, based on the latest front-end technology stack, including Vue3, Vite5, TypeScript, Pinia and UnoCSS. It has built-in rich theme configuration and components, strict code specifications, and an automated file routing system. In addition, it also uses the online mock data solution based on ApiFox. SoybeanAdmin provides you with a one-stop admin solution, no additional configuration, and out of the box. It is also a best practice for learning cutting-edge technologies quickly.`,
-      projectInfo: {
-        title: 'Project Info',
-        version: 'Version',
-        latestBuildTime: 'Latest Build Time',
-        githubLink: 'Github Link',
-        previewLink: 'Preview Link'
-      },
-      prdDep: 'Production Dependency',
-      devDep: 'Development Dependency'
     },
     home: {
       branchDesc:

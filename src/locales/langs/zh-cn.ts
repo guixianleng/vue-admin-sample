@@ -174,18 +174,7 @@ const local: App.I18n.Schema = {
     'document_element-plus': 'Element Plus文档',
     document_alova: 'Alova文档',
     'user-center': '个人中心',
-    about: '关于',
     function: '系统功能',
-    alova: 'alova示例',
-    alova_request: 'alova请求',
-    alova_user: '用户列表',
-    alova_scenes: '场景化请求',
-    function_tab: '标签页',
-    'function_multi-tab': '多标签页',
-    'function_hide-child': '隐藏子菜单',
-    'function_hide-child_one': '隐藏子菜单',
-    'function_hide-child_two': '菜单二',
-    'function_hide-child_three': '菜单三',
     function_request: '请求',
     'function_toggle-auth': '切换权限',
     'function_super-page': '超级管理员可见',
@@ -194,12 +183,6 @@ const local: App.I18n.Schema = {
     'manage_user-detail': '用户详情',
     manage_role: '角色管理',
     manage_menu: '菜单管理',
-    'multi-menu': '多级菜单',
-    'multi-menu_first': '菜单一',
-    'multi-menu_first_child': '菜单一子菜单',
-    'multi-menu_second': '菜单二',
-    'multi-menu_second_child': '菜单二子菜单',
-    'multi-menu_second_child_home': '菜单二子菜单首页',
     exception: '异常页',
     exception_403: '403',
     exception_404: '404',
@@ -208,26 +191,10 @@ const local: App.I18n.Schema = {
     plugin_copy: '剪贴板',
     plugin_charts: '图表',
     plugin_charts_echarts: 'ECharts',
-    plugin_charts_antv: 'AntV',
-    plugin_charts_vchart: 'VChart',
     plugin_editor: '编辑器',
     plugin_editor_quill: '富文本编辑器',
-    plugin_editor_markdown: 'MD 编辑器',
     plugin_icon: '图标',
-    plugin_map: '地图',
-    plugin_print: '打印',
-    plugin_swiper: 'Swiper',
-    plugin_video: '视频',
-    plugin_barcode: '条形码',
-    plugin_pinyin: '拼音',
-    plugin_excel: 'Excel',
-    plugin_pdf: 'PDF 预览',
-    plugin_gantt: '甘特图',
-    plugin_gantt_dhtmlx: 'dhtmlxGantt',
-    plugin_gantt_vtable: 'VTableGantt',
-    plugin_typeit: '打字机',
-    plugin_tables: '表格',
-    plugin_tables_vtable: 'VTable'
+    plugin_print: '打印'
   },
   page: {
     login: {
@@ -275,19 +242,6 @@ const local: App.I18n.Schema = {
       bindWeChat: {
         title: '绑定微信'
       }
-    },
-    about: {
-      title: '关于',
-      introduction: `SoybeanAdmin 是一个优雅且功能强大的后台管理模板，基于最新的前端技术栈，包括 Vue3, Vite5, TypeScript, Pinia 和 UnoCSS。它内置了丰富的主题配置和组件，代码规范严谨，实现了自动化的文件路由系统。此外，它还采用了基于 ApiFox 的在线Mock数据方案。SoybeanAdmin 为您提供了一站式的后台管理解决方案，无需额外配置，开箱即用。同样是一个快速学习前沿技术的最佳实践。`,
-      projectInfo: {
-        title: '项目信息',
-        version: '版本',
-        latestBuildTime: '最新构建时间',
-        githubLink: 'Github 地址',
-        previewLink: '预览地址'
-      },
-      prdDep: '生产依赖',
-      devDep: '开发依赖'
     },
     home: {
       branchDesc:

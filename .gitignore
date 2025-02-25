@@ -33,3 +33,5 @@ package-lock.json
 yarn.lock
 
 .VSCodeCounter
+components.d.ts
+elegant-router.d.ts
