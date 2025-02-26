@@ -36,3 +36,4 @@ yarn.lock
 components.d.ts
 elegant-router.d.ts
 .eslintcache
+auto-imports.d.ts

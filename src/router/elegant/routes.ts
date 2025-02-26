@@ -41,7 +41,7 @@ export const generatedRoutes: GeneratedRoute[] = [
     path: '/home',
     component: 'layout.base$view.home',
     meta: {
-      title: 'home',
+      title: '首页',
       icon: 'mdi:monitor-dashboard',
       order: 1
     }

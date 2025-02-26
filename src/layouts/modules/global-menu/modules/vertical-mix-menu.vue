@@ -102,7 +102,7 @@ watch(
           :style="{ width: showDrawer ? themeStore.sider.mixChildMenuWidth + 'px' : '0px' }"
         >
           <header class="flex-y-center justify-between px-12px" :style="{ height: themeStore.header.height + 'px' }">
-            <h2 class="text-16px text-primary font-bold">动物致伤 信息系统</h2>
+            <h2 class="text-16px text-primary font-bold">{{ APP_TITLE }}</h2>
             <PinToggler
               :pin="appStore.mixSiderFixed"
               :class="{ 'text-white:88 !hover:text-white': inverted }"

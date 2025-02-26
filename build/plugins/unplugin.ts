@@ -4,6 +4,7 @@ import type { PluginOption } from 'vite';
 import Icons from 'unplugin-icons/vite';
 import IconsResolver from 'unplugin-icons/resolver';
 import Components from 'unplugin-vue-components/vite';
+import AutoImport from 'unplugin-auto-import/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
@@ -38,6 +39,13 @@ export function setupUnplugin(viteEnv: Env.ImportMeta) {
         }),
         IconsResolver({ customCollections: [collectionName], componentPrefix: VITE_ICON_PREFIX })
       ]
+    }),
+    AutoImport({
+      imports: ['vue', 'vue-router', 'pinia'],
+      vueTemplate: true,
+      dts: 'src/typings/auto-imports.d.ts',
+      dirs: ['src/composables/**'],
+      resolvers: [ElementPlusResolver()]
     }),
     createSvgIconsPlugin({
       iconDirs: [localIconPath],
