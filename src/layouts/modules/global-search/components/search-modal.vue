@@ -5,7 +5,6 @@ import { onKeyStroke, useDebounceFn } from '@vueuse/core';
 import type { InputInstance } from 'element-plus';
 import { useRouteStore } from '@/store/modules/route';
 import { useAppStore } from '@/store/modules/app';
-import { $t } from '@/locales';
 import SearchResult from './search-result.vue';
 import SearchFooter from './search-footer.vue';
 
@@ -30,7 +29,7 @@ const searchInput = ref<InputInstance>();
 function search() {
   resultOptions.value = routeStore.searchMenus.filter(menu => {
     const trimKeyword = keyword.value.toLocaleLowerCase().trim();
-    const title = (menu.i18nKey ? $t(menu.i18nKey) : menu.label).toLocaleLowerCase();
+    const title = menu.label.toLocaleLowerCase();
     return trimKeyword && title.includes(trimKeyword);
   });
 
@@ -110,23 +109,17 @@ registerShortcut();
     @open-auto-focus="setFocus"
     @close="handleClose"
   >
-    <ElInput
-      ref="searchInput"
-      v-model="keyword"
-      clearable
-      :placeholder="$t('common.keywordSearch')"
-      @input="handleSearch"
-    >
+    <ElInput ref="searchInput" v-model="keyword" clearable placeholder="请输入关键词搜索" @input="handleSearch">
       <template #prefix>
         <icon-uil-search class="text-15px" />
       </template>
       <template v-if="isMobile" #append>
-        <ElButton type="primary" plain @click="handleClose">{{ $t('common.cancel') }}</ElButton>
+        <ElButton type="primary" plain @click="handleClose">取消</ElButton>
       </template>
     </ElInput>
 
     <div>
-      <ElEmpty v-if="resultOptions.length === 0" :description="$t('common.noData')" :image-size="50" />
+      <ElEmpty v-if="resultOptions.length === 0" description="无数据" :image-size="50" />
       <SearchResult v-else v-model:path="activePath" :options="resultOptions" @enter="handleEnter" />
     </div>
     <template #footer>

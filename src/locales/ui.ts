@@ -6,8 +6,3 @@ export const UILocales: any = {
   'zh-CN': zhCn,
   'en-US': en
 };
-
-// export const naiveDateLocales: Record<App.I18n.LangType, NDateLocale> = {
-//   'zh-CN': dateZhCN,
-//   'en-US': dateEnUS
-// };

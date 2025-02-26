@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { Placement } from 'element-plus';
 import { themeLayoutModeRecord } from '@/constants/app';
-import { $t } from '@/locales';
 
 defineOptions({ name: 'LayoutModeCard' });
 
@@ -76,7 +75,7 @@ function handleChangeMode(mode: UnionKey.ThemeLayoutMode) {
     >
       <ElTooltip :placement="item.placement">
         <template #content>
-          {{ $t(themeLayoutModeRecord[key]) }}
+          {{ themeLayoutModeRecord[key] }}
         </template>
         <div
           class="h-64px w-96px gap-6px rd-4px p-6px shadow dark:shadow-coolGray-5"

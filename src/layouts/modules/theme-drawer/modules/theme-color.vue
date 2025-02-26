@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useThemeStore } from '@/store/modules/theme';
-import { $t } from '@/locales';
 import SettingItem from '../components/setting-item.vue';
 
 defineOptions({ name: 'ThemeColor' });
@@ -34,12 +33,12 @@ const swatches: string[] = [
 </script>
 
 <template>
-  <ElDivider>{{ $t('theme.themeColor.title') }}</ElDivider>
+  <ElDivider>主题颜色</ElDivider>
   <div class="flex-col-stretch gap-12px">
     <ElTooltip placement="top-start">
       <template #content>
         <p>
-          <span class="pr-12px">{{ $t('theme.recommendColorDesc') }}</span>
+          <span class="pr-12px">推荐颜色的算法参照</span>
           <br />
           <ElButton
             text
@@ -53,15 +52,13 @@ const swatches: string[] = [
           </ElButton>
         </p>
       </template>
-      <SettingItem key="recommend-color" :label="$t('theme.recommendColor')">
+      <SettingItem key="recommend-color" label="应用推荐算法的颜色">
         <ElSwitch v-model="themeStore.recommendColor" />
       </SettingItem>
     </ElTooltip>
-    <SettingItem v-for="(_, key) in themeStore.themeColors" :key="key" :label="$t(`theme.themeColor.${key}`)">
+    <SettingItem v-for="(_, key) in themeStore.themeColors" :key="key" :label="key">
       <template v-if="key === 'info'" #suffix>
-        <ElCheckbox v-model="themeStore.isInfoFollowPrimary">
-          {{ $t('theme.themeColor.followPrimary') }}
-        </ElCheckbox>
+        <ElCheckbox v-model="themeStore.isInfoFollowPrimary">跟随主色</ElCheckbox>
       </template>
       <ElColorPicker
         v-model="themeStore.themeColors[key]"

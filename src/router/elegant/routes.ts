@@ -12,7 +12,6 @@ export const generatedRoutes: GeneratedRoute[] = [
     component: 'layout.blank$view.403',
     meta: {
       title: '403',
-      i18nKey: 'route.403',
       constant: true,
       hideInMenu: true
     }
@@ -23,7 +22,6 @@ export const generatedRoutes: GeneratedRoute[] = [
     component: 'layout.blank$view.404',
     meta: {
       title: '404',
-      i18nKey: 'route.404',
       constant: true,
       hideInMenu: true
     }
@@ -34,57 +32,9 @@ export const generatedRoutes: GeneratedRoute[] = [
     component: 'layout.blank$view.500',
     meta: {
       title: '500',
-      i18nKey: 'route.500',
       constant: true,
       hideInMenu: true
     }
-  },
-  {
-    name: 'function',
-    path: '/function',
-    component: 'layout.base',
-    meta: {
-      title: 'function',
-      i18nKey: 'route.function',
-      icon: 'icon-park-outline:all-application',
-      order: 6
-    },
-    children: [
-      {
-        name: 'function_request',
-        path: '/function/request',
-        component: 'view.function_request',
-        meta: {
-          title: 'function_request',
-          i18nKey: 'route.function_request',
-          icon: 'carbon:network-overlay',
-          order: 3
-        }
-      },
-      {
-        name: 'function_super-page',
-        path: '/function/super-page',
-        component: 'view.function_super-page',
-        meta: {
-          title: 'function_super-page',
-          i18nKey: 'route.function_super-page',
-          icon: 'ic:round-supervisor-account',
-          order: 5,
-          roles: ['R_SUPER']
-        }
-      },
-      {
-        name: 'function_toggle-auth',
-        path: '/function/toggle-auth',
-        component: 'view.function_toggle-auth',
-        meta: {
-          title: 'function_toggle-auth',
-          i18nKey: 'route.function_toggle-auth',
-          icon: 'ic:round-construction',
-          order: 4
-        }
-      }
-    ]
   },
   {
     name: 'home',
@@ -92,7 +42,6 @@ export const generatedRoutes: GeneratedRoute[] = [
     component: 'layout.base$view.home',
     meta: {
       title: 'home',
-      i18nKey: 'route.home',
       icon: 'mdi:monitor-dashboard',
       order: 1
     }
@@ -104,7 +53,6 @@ export const generatedRoutes: GeneratedRoute[] = [
     props: true,
     meta: {
       title: 'iframe-page',
-      i18nKey: 'route.iframe-page',
       constant: true,
       hideInMenu: true,
       keepAlive: true
@@ -117,159 +65,9 @@ export const generatedRoutes: GeneratedRoute[] = [
     props: true,
     meta: {
       title: 'login',
-      i18nKey: 'route.login',
       constant: true,
       hideInMenu: true
     }
-  },
-  {
-    name: 'manage',
-    path: '/manage',
-    component: 'layout.base',
-    meta: {
-      title: 'manage',
-      i18nKey: 'route.manage',
-      icon: 'carbon:cloud-service-management',
-      order: 9,
-      roles: ['R_ADMIN']
-    },
-    children: [
-      {
-        name: 'manage_menu',
-        path: '/manage/menu',
-        component: 'view.manage_menu',
-        meta: {
-          title: 'manage_menu',
-          i18nKey: 'route.manage_menu',
-          icon: 'material-symbols:route',
-          order: 3,
-          roles: ['R_ADMIN'],
-          keepAlive: true
-        }
-      },
-      {
-        name: 'manage_role',
-        path: '/manage/role',
-        component: 'view.manage_role',
-        meta: {
-          title: 'manage_role',
-          i18nKey: 'route.manage_role',
-          icon: 'carbon:user-role',
-          order: 2,
-          roles: ['R_SUPER']
-        }
-      },
-      {
-        name: 'manage_user',
-        path: '/manage/user',
-        component: 'view.manage_user',
-        meta: {
-          title: 'manage_user',
-          i18nKey: 'route.manage_user',
-          icon: 'ic:round-manage-accounts',
-          order: 1,
-          roles: ['R_ADMIN']
-        }
-      },
-      {
-        name: 'manage_user-detail',
-        path: '/manage/user-detail/:id',
-        component: 'view.manage_user-detail',
-        props: true,
-        meta: {
-          title: 'manage_user-detail',
-          i18nKey: 'route.manage_user-detail',
-          hideInMenu: true,
-          roles: ['R_ADMIN'],
-          activeMenu: 'manage_user'
-        }
-      }
-    ]
-  },
-  {
-    name: 'plugin',
-    path: '/plugin',
-    component: 'layout.base',
-    meta: {
-      title: '插件示例',
-      i18nKey: 'route.plugin',
-      order: 7,
-      icon: 'clarity:plugin-line'
-    },
-    children: [
-      {
-        name: 'plugin_charts',
-        path: '/plugin/charts',
-        meta: {
-          title: 'plugin_charts',
-          i18nKey: 'route.plugin_charts',
-          icon: 'mdi:chart-areaspline'
-        },
-        children: [
-          {
-            name: 'plugin_charts_echarts',
-            path: '/plugin/charts/echarts',
-            component: 'view.plugin_charts_echarts',
-            meta: {
-              title: 'plugin_charts_echarts',
-              i18nKey: 'route.plugin_charts_echarts',
-              icon: 'simple-icons:apacheecharts'
-            }
-          }
-        ]
-      },
-      {
-        name: 'plugin_copy',
-        path: '/plugin/copy',
-        component: 'view.plugin_copy',
-        meta: {
-          title: 'plugin_copy',
-          i18nKey: 'route.plugin_copy',
-          icon: 'mdi:clipboard-outline'
-        }
-      },
-      {
-        name: 'plugin_editor',
-        path: '/plugin/editor',
-        meta: {
-          title: 'plugin_editor',
-          i18nKey: 'route.plugin_editor',
-          icon: 'icon-park-outline:editor'
-        },
-        children: [
-          {
-            name: 'plugin_editor_quill',
-            path: '/plugin/editor/quill',
-            component: 'view.plugin_editor_quill',
-            meta: {
-              title: 'plugin_editor_quill',
-              i18nKey: 'route.plugin_editor_quill',
-              icon: 'mdi:file-document-edit-outline'
-            }
-          }
-        ]
-      },
-      {
-        name: 'plugin_icon',
-        path: '/plugin/icon',
-        component: 'view.plugin_icon',
-        meta: {
-          title: 'plugin_icon',
-          i18nKey: 'route.plugin_icon',
-          localIcon: 'custom-icon'
-        }
-      },
-      {
-        name: 'plugin_print',
-        path: '/plugin/print',
-        component: 'view.plugin_print',
-        meta: {
-          title: 'plugin_print',
-          i18nKey: 'route.plugin_print',
-          icon: 'mdi:printer'
-        }
-      }
-    ]
   },
   {
     name: 'user-center',
@@ -277,7 +75,6 @@ export const generatedRoutes: GeneratedRoute[] = [
     component: 'layout.base$view.user-center',
     meta: {
       title: 'user-center',
-      i18nKey: 'route.user-center',
       hideInMenu: true
     }
   }

@@ -1,7 +1,6 @@
 import { h } from 'vue';
 import type { App } from 'vue';
 import { ElButton } from 'element-plus';
-import { $t } from '@/locales';
 
 export function setupAppErrorHandle(app: App) {
   app.config.errorHandler = (err, vm, info) => {
@@ -35,9 +34,9 @@ export function setupAppVersionNotification() {
 
     // Show update notification
     const n = window.$notification!({
-      title: $t('system.updateTitle'),
+      title: '系统版本更新通知',
       message: h('div', {}, [
-        h('p', {}, $t('system.updateContent')),
+        h('p', {}, '检测到系统有新版本发布，是否立即刷新页面？'),
         h('div', { style: { display: 'flex', justifyContent: 'end', gap: '12px' } }, [
           h(
             ElButton,
@@ -46,7 +45,7 @@ export function setupAppVersionNotification() {
                 n?.close();
               }
             },
-            () => $t('system.updateCancel')
+            () => '稍后再说'
           ),
           h(
             ElButton,
@@ -56,7 +55,7 @@ export function setupAppVersionNotification() {
                 location.reload();
               }
             },
-            () => $t('system.updateConfirm')
+            () => '立即刷新'
           )
         ])
       ])

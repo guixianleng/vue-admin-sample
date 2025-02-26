@@ -1,7 +1,6 @@
 import type { AxiosResponse } from 'axios';
 import { BACKEND_ERROR_CODE, createFlatRequest, createRequest } from '@sa/axios';
 import { useAuthStore } from '@/store/modules/auth';
-import { $t } from '@/locales';
 import { localStg } from '@/utils/storage';
 import { getServiceBaseURL } from '@/utils/service';
 import { getAuthorization, handleExpiredRequest, showErrorMsg } from './shared';
@@ -60,9 +59,9 @@ export const request = createFlatRequest<App.Service.Response, RequestInstanceSt
         window.addEventListener('beforeunload', handleLogout);
 
         window.$messageBox
-          ?.confirm(response.data.msg, $t('common.error'), {
-            confirmButtonText: $t('common.confirm'),
-            cancelButtonText: $t('common.cancel'),
+          ?.confirm(response.data.msg, '错误', {
+            confirmButtonText: '确认',
+            cancelButtonText: '取消',
             type: 'error',
             closeOnClickModal: false,
             closeOnPressEscape: false
@@ -70,19 +69,6 @@ export const request = createFlatRequest<App.Service.Response, RequestInstanceSt
           .then(() => {
             logoutAndCleanup();
           });
-        // window.$dialog?.error({
-        //   title: $t('common.error'),
-        //   content: response.data.msg,
-        //   positiveText: $t('common.confirm'),
-        //   maskClosable: false,
-        //   closeOnEsc: false,
-        //   onPositiveClick() {
-        //     logoutAndCleanup();
-        //   },
-        //   onClose() {
-        //     logoutAndCleanup();
-        //   }
-        // });
 
         return null;
       }
