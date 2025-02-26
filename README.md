@@ -22,12 +22,6 @@
 - **NodeJS**: >=18.12.0，推荐 18.19.0 或更高。
 - **pnpm**: >= 8.7.0，推荐 8.14.0 或更高。
 
-**克隆项目**
-
-```bash
-git clone https://github.com/soybeanjs/soybean-admin.git
-```
-
 **安装依赖**
 
 ```bash
