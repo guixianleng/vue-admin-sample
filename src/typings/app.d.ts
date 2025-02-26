@@ -58,6 +58,16 @@ declare namespace App {
           /** Whether to show the multilingual */
           visible: boolean;
         };
+        /** Search */
+        search: {
+          /** Whether to show the search */
+          visible: boolean;
+        };
+        /** Theme button */
+        themeButton: {
+          /** Whether to show the theme button */
+          visible: boolean;
+        };
       };
       /** Tab */
       tab: {

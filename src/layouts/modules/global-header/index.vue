@@ -36,7 +36,7 @@ const { isFullscreen, toggle } = useFullscreen();
       <GlobalBreadcrumb v-if="!appStore.isMobile" class="ml-12px" />
     </div>
     <div class="h-full flex-y-center justify-end">
-      <GlobalSearch />
+      <GlobalSearch v-if="themeStore.header.search.visible" />
       <div>
         <FullScreen v-if="!appStore.isMobile" :full="isFullscreen" @click="toggle" />
       </div>
@@ -52,7 +52,7 @@ const { isFullscreen, toggle } = useFullscreen();
         @switch="themeStore.toggleThemeScheme"
       />
       <div>
-        <ThemeButton />
+        <ThemeButton v-if="themeStore.header.themeButton.visible" />
       </div>
       <UserAvatar />
     </div>
