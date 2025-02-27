@@ -8,7 +8,6 @@
     "mariusalchimavicius.json-to-ts",
     "mhutchie.git-graph",
     "sdras.vue-vscode-snippets",
-    "vue.volar",
-    "vue.vscode-typescript-vue-plugin"
+    "vue.volar"
   ]
 }
