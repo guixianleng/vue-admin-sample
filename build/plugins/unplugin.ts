@@ -8,6 +8,7 @@ import AutoImport from 'unplugin-auto-import/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+import { VxeResolver, lazyImport } from 'vite-plugin-lazy-import';
 
 export function setupUnplugin(viteEnv: Env.ImportMeta) {
   const { VITE_ICON_PREFIX, VITE_ICON_LOCAL_PREFIX } = viteEnv;
@@ -46,6 +47,16 @@ export function setupUnplugin(viteEnv: Env.ImportMeta) {
       dts: 'src/typings/auto-imports.d.ts',
       dirs: ['src/composables/**'],
       resolvers: [ElementPlusResolver()]
+    }),
+    lazyImport({
+      resolvers: [
+        VxeResolver({
+          libraryName: 'vxe-table'
+        }),
+        VxeResolver({
+          libraryName: 'vxe-pc-ui'
+        })
+      ]
     }),
     createSvgIconsPlugin({
       iconDirs: [localIconPath],

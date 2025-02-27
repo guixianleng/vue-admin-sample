@@ -77,5 +77,13 @@ export const generatedRoutes: GeneratedRoute[] = [
       title: 'user-center',
       hideInMenu: true
     }
+  },
+  {
+    name: 'vxe-table',
+    path: '/vxe-table',
+    component: 'layout.base$view.vxe-table',
+    meta: {
+      title: 'vxe-table'
+    }
   }
 ];

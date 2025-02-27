@@ -41,11 +41,30 @@ export default defineConfig(configEnv => {
       port: 9725
     },
     build: {
-      reportCompressedSize: false,
       sourcemap: viteEnv.VITE_SOURCE_MAP === 'Y',
       commonjsOptions: {
         ignoreTryCatch: false
-      }
+      },
+      // 自定义底层的 Rollup 打包配置
+      rollupOptions: {
+        output: {
+          /**
+           * 1. 注意这些包名必须存在，否则打包会报错
+           * 2. 如果你不想自定义 chunk 分割策略，可以直接移除这段配置
+           *
+           * @name 分块策略
+           */
+          manualChunks: {
+            vue: ['vue', 'vue-router', 'pinia'],
+            element: ['element-plus', '@element-plus/icons-vue'],
+            vxe: ['vxe-table']
+          }
+        }
+      },
+      // 是否开启 gzip 压缩大小报告，禁用时能略微提高构建性能
+      reportCompressedSize: false,
+      // 单个 chunk 文件的大小超过 2048kB 时发出警告
+      chunkSizeWarningLimit: 2048
     }
   };
 });

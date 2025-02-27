@@ -6,7 +6,8 @@ import {
   setupIconifyOffline,
   setupLoading,
   setupNProgress,
-  setupUI
+  setupUI,
+  setupVxeTable
 } from './plugins';
 import { setupStore } from './store';
 import { setupRouter } from './router';
@@ -24,6 +25,8 @@ async function setupApp() {
   const app = createApp(App);
 
   setupUI(app);
+
+  setupVxeTable(app);
 
   setupStore(app);
 
