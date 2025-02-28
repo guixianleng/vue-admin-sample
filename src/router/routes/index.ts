@@ -16,7 +16,7 @@ const customRoutes: CustomRoute[] = [
     meta: {
       title: '异常页',
       icon: 'ant-design:exception-outlined',
-      order: 7
+      order: 2
     },
     children: [
       {

@@ -83,7 +83,9 @@ export const generatedRoutes: GeneratedRoute[] = [
     path: '/vxe-table',
     component: 'layout.base$view.vxe-table',
     meta: {
-      title: 'vxe-table'
+      title: 'vxe-table',
+      icon: 'mdi:table',
+      order: 3
     }
   }
 ];

@@ -68,9 +68,7 @@ const saveApi = (insertRecords: RowVO[]) => {
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   autoResize: true,
   height: '100%',
-  printConfig: {},
-  importConfig: {},
-  exportConfig: {},
+  keepSource: true,
   pagerConfig: {
     enabled: true
   },
@@ -93,6 +91,10 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     ]
   },
   proxyConfig: {
+    response: {
+      result: 'result',
+      total: 'page.total'
+    },
     ajax: {
       // 接收 Promise
       query: ({ page }) => {
@@ -111,10 +113,15 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   columns: [
     { type: 'checkbox', width: 50 },
     { type: 'seq', width: 70 },
-    { field: 'name', title: 'Name', editRender: { autofocus: '.vxe-input--inner' }, slots: { edit: 'name_edit' } },
-    { field: 'nickname', title: 'Nickname', editRender: {}, slots: { edit: 'nickname_edit' } },
-    { field: 'role', title: 'Role', editRender: {}, slots: { edit: 'role_edit' } },
-    { field: 'address', title: 'Address', showOverflow: true, editRender: {}, slots: { edit: 'address_edit' } }
+    { field: 'name', title: 'Name', editRender: { name: 'VxeInput' } },
+    { field: 'nickname', title: 'Nickname', editRender: { name: 'VxeInput' } },
+    { field: 'role', title: 'Role', editRender: { name: 'VxeInput' } },
+    {
+      field: 'address',
+      title: 'Address',
+      showOverflow: true,
+      editRender: { name: 'VxeInput' }
+    }
   ]
 });
 

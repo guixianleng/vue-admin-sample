@@ -82,19 +82,6 @@ VXETable.setConfig({
     pageSizes: [10, 20, 50],
     background: true,
     layouts: ['Total', 'PrevJump', 'PrevPage', 'Number', 'NextPage', 'NextJump', 'Sizes', 'FullJump']
-  },
-  // grid 会默认继承 table，所以无需重复设置一样的参数
-  grid: {
-    // 数据代理相关配置，无使用就忽略
-    proxyConfig: {
-      showResponseMsg: false,
-      showActiveMsg: true,
-      response: {
-        total: 'page.total',
-        result: 'result'
-        // list: 'data'
-      }
-    }
   }
 });
 
