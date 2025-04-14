@@ -5,6 +5,8 @@ import {
   VxeCheckbox,
   VxeCheckboxGroup,
   VxeDatePicker,
+  VxeForm,
+  VxeFormItem,
   VxeInput,
   VxeLoading,
   VxeModal,
@@ -14,8 +16,6 @@ import {
   VxeRadioButton,
   VxeRadioGroup,
   VxeSelect,
-  // VxeSwitch,
-  // VxeTextEllipsis,
   VxeTooltip,
   VxeUI,
   VxeUpload
@@ -29,6 +29,8 @@ VxeUI.setI18n('zh-CN', zhCN);
 VxeUI.setLanguage('zh-CN');
 
 function lazyVxeUI(app: App) {
+  app.use(VxeForm);
+  app.use(VxeFormItem);
   app.use(VxeButton);
   app.use(VxeButtonGroup);
   app.use(VxeCheckbox);
@@ -43,8 +45,6 @@ function lazyVxeUI(app: App) {
   app.use(VxeRadioButton);
   app.use(VxeRadioGroup);
   app.use(VxeSelect);
-  // app.use(VxeSwitch);
-  // app.use(VxeTextEllipsis);
   app.use(VxeUpload);
   app.use(VxeTooltip);
 }
